@@ -110,6 +110,7 @@ return [
             'route' => [
                 'name' => 'welcome',
                 'data' => [],
+                'not_installed' => 'verify_purchase'
             ],
             'abort' => [
                 'type' => '404',

@@ -118,4 +118,3 @@ Route::get('user/request_auth', 'UserAccountsController@showAuthPage');
 
 Route::get('/home', 'HomeController@index')->name('home');  
 });
-

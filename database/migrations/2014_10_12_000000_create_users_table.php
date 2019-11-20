@@ -20,14 +20,12 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password', 64);
-            $table->string('status')->nullable();
             $table->string('auth_token', 600)->nullable();
             $table->dateTime('date_issued')->nullable();
             $table->dateTime('date_changed')->nullable();
             $table->dateTime('expiry_date')->nullable();
             $table->dateTime('last_activated')->nullable();
             $table->dateTime('last_suspended')->nullable();
-            $table->integer('plan_id')->default(1);
             $table->rememberToken()->nullable();
             $table->timestamps();
 
@@ -35,12 +33,12 @@ class CreateUsersTable extends Migration
         });
 
         //create default admin details;
-        DB::table('users')->insert([
+       /* DB::table('users')->insert([
             'name' => 'Demo Admin',
             'email' => 'admin@backless.test',
             'password' => bcrypt('password'),
             'status' => 'admin'
-        ]);
+        ]); */
         
     }
 

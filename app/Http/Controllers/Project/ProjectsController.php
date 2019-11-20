@@ -142,7 +142,6 @@ class ProjectsController extends Controller
 
         $dataSize = ($dataSize[0])->data_size;
         $dataAll  = ($dataAll[0])->data_all;
-        $plan = Plan::find(Auth::user()->plan_id);
 
 
         $assetsSize = DB::table('assets')->select(
@@ -164,7 +163,6 @@ class ProjectsController extends Controller
             'dataUsedByOthers' => $dataAll-$dataSize,
             'assetsSize' => $assetsSize,
             'assetsUsedByOthers' => $assetsAll-$assetsSize,
-            'plan' => $plan,
         ]);
 
         

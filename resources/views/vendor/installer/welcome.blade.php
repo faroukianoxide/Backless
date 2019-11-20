@@ -13,8 +13,8 @@
       {{ trans('installer_messages.welcome.message') }}
     </p>
     <p class="text-center">
-      <a href="{{ route('LaravelInstaller::requirements') }}" class="button">
-        {{ trans('installer_messages.welcome.next') }}
+      <a href="/install/verify_purchase" class="button">
+        Verify Purchase Code
         <i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>
       </a>
     </p>

@@ -2,8 +2,10 @@
 
 namespace RachidLaasri\LaravelInstaller\Middleware;
 
+use App\Helpers\StringHelper;
 use Closure;
 use DB;
+use Illuminate\Support\Facades\Crypt;
 use Redirect;
 
 class canInstall
@@ -19,6 +21,7 @@ class canInstall
      */
     public function handle($request, Closure $next)
     {
+
         if($this->alreadyInstalled()) {
 
             $installedRedirect = config('installer.installedAlreadyAction');
@@ -59,4 +62,6 @@ class canInstall
     {
         return file_exists(storage_path('installed'));
     }
+
+    
 }

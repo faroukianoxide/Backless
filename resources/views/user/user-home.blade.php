@@ -37,13 +37,11 @@
                                     @else
                                     {{ ($planUsage['store']) }}</span>
                                     @endif
-                                    
-                                    <span style="font-size: 30px;border-left:2px;
-                                    border-left-style:solid" class="px-2">{{ $planUsage['plan_store']   }}</span>
+                                                                       
                                 </h4>
-                                <span class="pull-right">MB</span>
+                                <span>MB</span>
                                 
-                                <p class="text-light">~ {{ round(($planUsage['store']/$planUsage['plan_store']/1024/1024) * 100, 2) }}%</p>
+                                
                             </div>
             
                         </div>
@@ -61,11 +59,12 @@
                                     @else
                                     {{ round($usassge[1], 4) }}
                                     @endif
-                                    <span style="font-size: 30px;border-left:2px;
-                                    border-left-style:solid" class="px-2">{{ $planUsage['plan_storage']   }}</span>
+
+                                     
+                                    
                                 </h4>
-                                <span class="pull-right">GB</span>
-                                <p class="text-light">~ {{ round(($planUsage['storage']/$planUsage['plan_storage']/1024/1024/1024) * 100, 2) }}%</p>
+                                <span>GB</span>
+                                
             
                             </div>
                         </div>

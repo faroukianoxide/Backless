@@ -40,6 +40,7 @@ class UserAccountsController extends Controller
         }
 
         $planUsage = $this->getPlanBrief();
+        
 
         return view('user.user-home', compact(
             ['username', 'projects', 'usage',
@@ -123,16 +124,11 @@ class UserAccountsController extends Controller
         $resources = $this->getAccountResourceUsage(Auth::user()->id);
         $projects = Auth::user()->projects()->count();
         $plan_id = Auth::user()->plan_id;
-        $plan = Plan::find($plan_id);
 
         return [
             'storage' => $resources['storage'],
             'store' => $resources['store'],
             'projects'=> $projects,
-            'plan_name' => $plan->name,
-            'plan_storage'=> $plan->storage_limit,
-            'plan_store' => $plan->store_limit,
-            'plan_projects' => $plan->projects,
         ];        
 
     }

@@ -40,6 +40,8 @@ Route::group(['middleware' => ['cors', 'auth:api', 'active'] ], function() {
     Route::get('projects/{project_id}/data/fixed/{length}', 'AccessPrivateData@getFixedLength');
     Route::get('projects/{project_id}/data/fixed/{length}/{order}', 'AccessPrivateData@getFixedLength');
     //added in: v 1.1
+    Route::get('projects/{project_id}/data/paginate/{length}', 'AccessPrivateData@paginate');
+    //added in: v 1.1
     Route::get('projects/{project_id}/data/paginate/{length}/{order}', 'AccessPrivateData@paginate');
     
     //manipulate data

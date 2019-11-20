@@ -238,7 +238,6 @@ class AccessPrivateData extends Controller
 
         }
 
-
     }
 
     public function resolveGetParameter ($data, $getParams, $project_id, $isArray = false, $shouldReturnValue = false) {

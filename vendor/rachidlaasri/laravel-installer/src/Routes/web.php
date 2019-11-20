@@ -11,6 +11,9 @@ Route::group(['prefix' => 'install','as' => 'LaravelInstaller::','namespace' => 
         'uses' => 'EnvironmentController@environmentMenu'
     ]);
 
+    
+
+
     Route::get('environment/wizard', [
         'as' => 'environmentWizard',
         'uses' => 'EnvironmentController@environmentWizard'
