@@ -10,4 +10,4 @@ An opensource backend built with Laravel for creating applications without backe
     <li>Projects stat: Data store traffic</li>
 
 <h3>Installation</h3>
-It comes with an opensource installer. Clone the <a href = "https://github.com/Farouk-Ibrahim/Backless-docs"> docs' repo</a>.
+Download the latest release, it comes with an installer. Clone the <a href = "https://github.com/Farouk-Ibrahim/Backless-docs"> docs' repo</a>.
