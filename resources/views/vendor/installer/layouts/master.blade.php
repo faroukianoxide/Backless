@@ -23,7 +23,6 @@
                 <div class="header">
                     <h1 class="header__title">@yield('title')</h1>
                 </div>
-                
                 <ul class="step">
                     <li class="step__divider"></li>
                     <li class="step__item {{ isActive('LaravelInstaller::final') }}">
@@ -49,9 +48,6 @@
                             <i class="step__icon fa fa-key" aria-hidden="true"></i>
                         @endif
                     </li>
-
-                    
-                    
                     <li class="step__divider"></li>
                     <li class="step__item {{ isActive('LaravelInstaller::requirements') }}">
                         @if(Request::is('install') || Request::is('install/requirements') || Request::is('install/permissions') || Request::is('install/environment') || Request::is('install/environment/wizard') || Request::is('install/environment/classic') )
@@ -62,19 +58,6 @@
                             <i class="step__icon fa fa-list" aria-hidden="true"></i>
                         @endif
                     </li>
-
-                    <li class="step__divider"></li>
-                    <li class="step__item {{ isActive('LaravelInstaller::verify_purchase') }}">
-                        @if(Request::is('install/permissions') || Request::is('install/environment') || Request::is('install/environment/wizard') || Request::is('install/environment/classic') || Request::is('install/verify_purchase') )
-                            <a href="{{ route('LaravelInstaller::permissions') }}">
-                                <i class="step__icon fa fa-cc" aria-hidden="true"></i>
-                            </a>
-                        @else
-                            <i class="step__icon fa fa-cc" aria-hidden="true"></i>
-                        @endif
-                    </li>
-
-
                     <li class="step__divider"></li>
                     <li class="step__item {{ isActive('LaravelInstaller::welcome') }}">
                         @if(Request::is('install') || Request::is('install/requirements') || Request::is('install/permissions') || Request::is('install/environment') || Request::is('install/environment/wizard') || Request::is('install/environment/classic') )
@@ -104,20 +87,18 @@
                             <button type="button" class="close" id="close_alert" data-dismiss="alert" aria-hidden="true">
                                  <i class="fa fa-close" aria-hidden="true"></i>
                             </button>
-                            <div>
+                            <h4>
                                 <i class="fa fa-fw fa-exclamation-triangle" aria-hidden="true"></i>
-                                     @foreach($errors->all() as $error)
-                                    <span>{{ $error }}</span>
+                                {{ trans('installer_messages.forms.errorTitle') }}
+                            </h4>
+                            <ul>
+                                @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
                                 @endforeach
-                            </div>
-                            
-                               
-                            
+                            </ul>
                         </div>
                     @endif
                     @yield('container')
-                 
-
                 </div>
             </div>
         </div>

@@ -166,24 +166,24 @@
                         data: {
                             datasets: [{
                                 data: [useMB.toPrecision(2), useMBOthers.toPrecision(2),
-                                ],
+                                (result.plan.store_limit - useMB - useMBOthers),],
                                 backgroundColor: [
                                     "rgba(0, 123, 255,0.9)",
                                     "grey",     
-                                
+                                    "red",
 
                                 ],
                                 hoverBackgroundColor: [
                                     "rgba(0, 123, 255,0.9)",
                                     "grey",
-                                
+                                    "red"
                                 ]
 
                             }],
                             labels: [
                                 "Used",
                                 "Other Projects by You",
-                                
+                                "Free Space",
                             ]
                         },
                         options: {
@@ -198,23 +198,25 @@
                         data: {
                             datasets: [{
                                 data: [assetsMB.toPrecision(2), assetsUsedByOthers.toPrecision(2),
-                                ],
+                                (result.plan.storage_limit * 1024 
+                                 - assetsMB - assetsUsedByOthers),],
                                 backgroundColor: [
                                     "rgba(0, 123, 255,0.9)",
                                     "rgba (0, 50, 256, 1)",     
-                                
+                                    "red",
 
                                 ],
                                 hoverBackgroundColor: [
                                     "rgba(0, 123, 255,0.9)",
                                     "grey",     
-                                
+                                    "red",
                                 ]
 
                             }],
                             labels: [
                                 "Used",
                                 "Other Projects by You",
+                                "Free Space",
                                 
                             ]
                         },
