@@ -2152,16 +2152,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "2.0.12",
+            "version": "2.0.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "8814dc7841db159daed0b32c2b08fb7e03c6afe7"
+                "reference": "c812fbb4d6b4d7f30235ab7298a12f09ba13b37c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/8814dc7841db159daed0b32c2b08fb7e03c6afe7",
-                "reference": "8814dc7841db159daed0b32c2b08fb7e03c6afe7",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/c812fbb4d6b4d7f30235ab7298a12f09ba13b37c",
+                "reference": "c812fbb4d6b4d7f30235ab7298a12f09ba13b37c",
                 "shasum": ""
             },
             "require": {
@@ -2169,8 +2169,7 @@
             },
             "require-dev": {
                 "phing/phing": "~2.7",
-                "phpunit/phpunit": "^4.8.35|^5.7|^6.0",
-                "sami/sami": "~2.0",
+                "phpunit/phpunit": "^4.8.35|^5.7|^6.0|^9.4",
                 "squizlabs/php_codesniffer": "~2.0"
             },
             "suggest": {
@@ -2240,7 +2239,25 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2018-11-04T05:45:48+00:00"
+            "support": {
+                "issues": "https://github.com/phpseclib/phpseclib/issues",
+                "source": "https://github.com/phpseclib/phpseclib/tree/2.0.37"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/terrafrost",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/phpseclib",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/phpseclib/phpseclib",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-04-04T04:57:45+00:00"
         },
         {
             "name": "psr/container",
